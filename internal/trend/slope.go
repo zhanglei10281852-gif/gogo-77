@@ -76,7 +76,7 @@ func TheilSen(xs, ys []float64) (slope, intercept float64, pairs int, ok bool) {
 	if err != nil {
 		return 0, 0, 0, false
 	}
-	residuals := ys
+	residuals := make([]float64, len(xs))
 	for index := range xs {
 		residuals[index] = ys[index] - medianSlope*xs[index]
 	}
