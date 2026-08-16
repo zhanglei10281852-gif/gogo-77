@@ -1,0 +1,4 @@
+{"event_id":"EVT-0001","observed_at":"2026-03-14T09:00:00Z","latitude":45.229,"longitude":-95.461,"species":"grey-throated shearwater (fictional)","carcass_count":6,"h5_confirmed":false,"locality_note":"upper reach shoreline, fictional locality"}
+{"event_id":"EVT-0002","observed_at":"2026-03-19T10:30:00Z","latitude":45.2255,"longitude":-95.4555,"species":"grey-throated shearwater (fictional)","carcass_count":22,"h5_confirmed":true,"locality_note":"upper reach shoreline, fictional locality"}
+{"event_id":"EVT-0003","observed_at":"2026-03-23T08:15:00Z","latitude":45.221,"longitude":-95.448,"species":"banded surf tern (fictional)","carcass_count":41,"h5_confirmed":true,"locality_note":"brook confluence, fictional locality"}
+{"event_id":"EVT-0004","observed_at":"2026-03-26T11:45:00Z","latitude":45.195,"longitude":-95.402,"species":"banded surf tern (fictional)","carcass_count":12,"h5_confirmed":true,"locality_note":"mid reach bank, fictional locality"}

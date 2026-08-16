@@ -1,0 +1,6 @@
+.cache/
+.git/
+.gitignore
+*.exe
+/fluwatershed
+RELEASE_REPORT.md

@@ -1,0 +1,79 @@
+{
+  "schema_version": "fluwatershed-config/v1",
+  "profile_id": "reference-profile",
+  "quantification": {
+    "min_quantifiable_replicates": 2,
+    "non_detect_rule": "zero",
+    "detected_not_quantifiable_rule": "half_loq",
+    "uncertainty_coverage_k": 1.96,
+    "single_replicate_log10_sd": 0.25,
+    "report_significant_digits": 6,
+    "min_copies_per_litre_floor": 1,
+    "primary_target_gene": "influenza_a_matrix_gene"
+  },
+  "quality": {
+    "replicate_ct_tolerance": 1.5,
+    "min_curve_r_squared": 0.98,
+    "curve_slope_min": -3.8,
+    "curve_slope_max": -3,
+    "negative_control_min_ct": 38,
+    "positive_recovery_min": 0.5,
+    "positive_recovery_max": 2,
+    "inhibition_max_ct_shift": 2,
+    "max_holding_hours_by_matrix": {
+      "sediment": 72,
+      "wastewater_influent": 48,
+      "waterway_grab": 36
+    },
+    "transport_temperature_min_c": 0,
+    "transport_temperature_max_c": 10,
+    "max_custody_gap_hours": 36,
+    "require_custody_continuity": true
+  },
+  "normalisation": {
+    "enable_flow_normalisation": true,
+    "enable_population_normalisation": true,
+    "enable_indicator_correction": true,
+    "indicator_correction_min": 0.25,
+    "indicator_correction_max": 4,
+    "per_capita_scale": 1
+  },
+  "baseline": {
+    "window_days": 21,
+    "min_points": 4,
+    "exclude_current_day": true,
+    "min_dispersion": 0.05
+  },
+  "detection": {
+    "baseline_multiple": 3,
+    "robust_z_threshold": 3,
+    "default_absolute_threshold_copies_per_day": 200000000000,
+    "default_absolute_threshold_copies_per_litre": 30000,
+    "sustained_intervals": 2,
+    "trend_window_days": 21,
+    "min_trend_points": 4,
+    "rising_slope_log10_per_day": 0.02,
+    "falling_slope_log10_per_day": -0.02,
+    "upstream_travel_tolerance_hours": 24
+  },
+  "corroboration": {
+    "wastewater_weight": 0.45,
+    "waterway_grab_weight": 0.25,
+    "carcass_weight": 0.2,
+    "sediment_weight": 0.1,
+    "carcass_radius_km": 25,
+    "carcass_window_days": 14,
+    "min_evidence_streams": 2,
+    "low_grade_score": 0.2,
+    "moderate_grade_score": 0.45,
+    "high_grade_score": 0.7,
+    "carcass_count_for_full_weight": 25
+  },
+  "alerting": {
+    "open_grade": "moderate",
+    "sustain_after_updates": 2,
+    "resolve_after_updates": 2,
+    "cooldown_hours": 72,
+    "identifier_bytes": 8
+  }
+}

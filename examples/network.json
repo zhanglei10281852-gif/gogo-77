@@ -1,0 +1,100 @@
+{
+  "schema_version": "fluwatershed/v1",
+  "catchment_id": "vellamoor-basin",
+  "label": "Vellamoor Basin demonstration catchment (fictional)",
+  "sites": [
+    {
+      "site_id": "WW-KELDMOOR",
+      "label": "Keldmoor influent works (fictional)",
+      "matrix": "wastewater_influent",
+      "latitude": 45.21,
+      "longitude": -95.44,
+      "served_population": 18400,
+      "mean_daily_flow_m3": 6200,
+      "indicator_reference_copies_per_litre": 24000000,
+      "absolute_threshold_signal": 0
+    },
+    {
+      "site_id": "WW-VELLBRIDGE",
+      "label": "Vellbridge influent works (fictional)",
+      "matrix": "wastewater_influent",
+      "latitude": 45.16,
+      "longitude": -95.32,
+      "served_population": 42000,
+      "mean_daily_flow_m3": 14800,
+      "indicator_reference_copies_per_litre": 31000000,
+      "absolute_threshold_signal": 0
+    },
+    {
+      "site_id": "WW-BRACKHOLT",
+      "label": "Brackholt influent works (fictional)",
+      "matrix": "wastewater_influent",
+      "latitude": 45.11,
+      "longitude": -95.21,
+      "served_population": 96000,
+      "mean_daily_flow_m3": 31000,
+      "indicator_reference_copies_per_litre": 28000000,
+      "absolute_threshold_signal": 0
+    },
+    {
+      "site_id": "RIV-KELD-BROOK",
+      "label": "Keld Brook grab point (fictional)",
+      "matrix": "waterway_grab",
+      "latitude": 45.185,
+      "longitude": -95.39,
+      "served_population": 0,
+      "mean_daily_flow_m3": 0,
+      "indicator_reference_copies_per_litre": 0,
+      "absolute_threshold_signal": 0
+    },
+    {
+      "site_id": "RIV-VELL-WEIR",
+      "label": "Vellbridge weir grab point (fictional)",
+      "matrix": "waterway_grab",
+      "latitude": 45.14,
+      "longitude": -95.26,
+      "served_population": 0,
+      "mean_daily_flow_m3": 0,
+      "indicator_reference_copies_per_litre": 0,
+      "absolute_threshold_signal": 0
+    },
+    {
+      "site_id": "SED-BRACK-POOL",
+      "label": "Brackholt pool sediment station (fictional)",
+      "matrix": "sediment",
+      "latitude": 45.09,
+      "longitude": -95.16,
+      "served_population": 0,
+      "mean_daily_flow_m3": 0,
+      "indicator_reference_copies_per_litre": 0,
+      "absolute_threshold_signal": 0
+    }
+  ],
+  "links": [
+    {
+      "upstream_site_id": "WW-KELDMOOR",
+      "downstream_site_id": "RIV-KELD-BROOK",
+      "travel_hours": 6
+    },
+    {
+      "upstream_site_id": "RIV-KELD-BROOK",
+      "downstream_site_id": "RIV-VELL-WEIR",
+      "travel_hours": 10
+    },
+    {
+      "upstream_site_id": "WW-VELLBRIDGE",
+      "downstream_site_id": "RIV-VELL-WEIR",
+      "travel_hours": 4
+    },
+    {
+      "upstream_site_id": "RIV-VELL-WEIR",
+      "downstream_site_id": "SED-BRACK-POOL",
+      "travel_hours": 14
+    },
+    {
+      "upstream_site_id": "WW-BRACKHOLT",
+      "downstream_site_id": "SED-BRACK-POOL",
+      "travel_hours": 8
+    }
+  ]
+}

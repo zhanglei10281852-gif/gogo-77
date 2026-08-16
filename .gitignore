@@ -1,0 +1,6 @@
+# Local caches, build output and smoke-run artifacts. None of this is part of
+# the project source and none of it is committed.
+.cache/
+/fluwatershed
+/fluwatershed.exe
+*.tmp
